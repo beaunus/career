@@ -14,7 +14,6 @@ digraph Job {
   Users [fillcolor=LightBlue label="The Users" style=filled]
   Users -> Job
 
-
   ' Values
   Alignment [fillcolor=LimeGreen style=filled]
   Autonomy [fillcolor=LimeGreen style=filled]
