@@ -1,0 +1,94 @@
+@startuml the job
+
+digraph Job {
+  ' Goal
+  Job [fillcolor=yellow, style=filled label="The job"]
+
+  ' Human Elements
+  Person [fillcolor=LightBlue label="The Person" style=filled]
+  Person -> Job
+  Team [fillcolor=LightBlue label="The Team" style=filled]
+  Team -> Job
+  Company [fillcolor=LightBlue label="The Company" style=filled]
+  Company -> Job
+  Users [fillcolor=LightBlue label="The Users" style=filled]
+  Users -> Job
+
+
+  ' Values
+  Alignment [fillcolor=LimeGreen style=filled]
+  Autonomy [fillcolor=LimeGreen style=filled]
+  Agility [fillcolor=LimeGreen style=filled]
+
+  ' Artifacts
+  CodeBase [fillcolor=LightPink style=filled]
+  Product [fillcolor=LightPink style=filled]
+
+  ' Actions
+  Validation [label="Validate proposals\nand products with\nlittle delay" shape=note]
+  Alignment -> Validation
+  Validation -> Person
+
+  ImportantBigProjects [label="Attend to important\ntasks that are not\nurgent" shape=note]
+  Autonomy -> ImportantBigProjects
+  ImportantBigProjects -> Person
+
+  Mentorship [label="Regularly learn from\neach other" shape=note]
+  Autonomy -> Mentorship
+  Mentorship -> Person
+
+  WorkLifeBalance [label="Respect personal\nboundaries for\nwork-life balance" shape=note]
+  Autonomy -> WorkLifeBalance
+  WorkLifeBalance -> Person
+
+  Creativity [label="Empower creativity" shape=note]
+  Autonomy -> Creativity
+  Creativity -> Person
+  Creativity -> Team
+
+  RelaxedPredictions [label="Relax precision for\nlong-term\npredictions" shape=note]
+  Agility -> RelaxedPredictions
+  RelaxedPredictions -> Person
+  RelaxedPredictions -> Team
+
+  CodeReview [label="Review code often\nand empatheticly" shape=note]
+  Alignment -> CodeReview
+  CodeBase -> CodeReview
+  CodeReview -> Person
+  CodeReview -> Team
+
+  SimplicityAndElegance [label="Prefer simplicity\nand elegance" shape=note]
+  Alignment -> SimplicityAndElegance
+  CodeBase -> SimplicityAndElegance
+  SimplicityAndElegance -> Person
+  SimplicityAndElegance -> Team
+
+  Tests [label="Write tests to\nincrease\nunderstanding and\nreduce risk" shape=note]
+  CodeBase -> Tests
+  Tests -> Person
+  Tests -> Team
+
+  FrequentDeployment [label="Deploy frequently" shape=note]
+  Agility -> FrequentDeployment
+  FrequentDeployment -> Team
+
+  Flexibility [label="Adapt processes as\nneeded" shape=note]
+  Autonomy -> Flexibility
+  Agility -> Flexibility
+  Flexibility -> Team
+  Flexibility -> Company
+
+  UserAwareness [label="Observe users'\nbehaviors and\nadjust accordingly" shape=note]
+  Alignment -> UserAwareness
+  UserAwareness -> Team
+  UserAwareness -> Company
+
+  HelpingPeople [label="Improve people's\nlives in a\nmeaningful way" shape=note]
+  Product -> HelpingPeople
+  HelpingPeople -> Users
+
+  SimpleProduct [label="Build products that\nare easy to\nunderstand and\nexplain" shape=note]
+  Product -> SimpleProduct
+  SimpleProduct -> Users
+}
+@enduml
