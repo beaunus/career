@@ -1,0 +1,14 @@
+{
+  "name": "career",
+  "version": "1.0.0",
+  "description": "Beau Dobbin's Career Resources",
+  "repository": "git@github.com:beaunus/career.git",
+  "author": "Beau Dobbin <beau@beaunus.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "node-plantuml": "^0.9.0"
+  },
+  "scripts": {
+    "generate": "for f in **/*.puml; do puml generate $f -o \"${f%.*}.png\"; done"
+  }
+}
