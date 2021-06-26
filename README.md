@@ -10,3 +10,11 @@ Each folder has its own README.
 ## Dependencies
 
 There are some JavaScript tools that I use to improve the workflow.
+
+```sh
+# install dependencies
+yarn
+
+# generate images from .puml files
+yarn generate
+```
