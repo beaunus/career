@@ -45,6 +45,11 @@ digraph Job {
   Creativity -> Person
   Creativity -> Team
 
+  ClearExpectations [label="Clarify expectations\nand growth\nopportunities" shape=note]
+  Autonomy -> ClearExpectations
+  ClearExpectations -> Person
+  ClearExpectations -> Team
+
   RelaxedPredictions [label="Relax precision for\nlong-term\npredictions" shape=note]
   Agility -> RelaxedPredictions
   RelaxedPredictions -> Person
